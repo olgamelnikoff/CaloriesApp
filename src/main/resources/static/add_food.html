@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/home.css" type="text/css">
+    <title>Home</title>
+</head>
+<body>
+<div class="bg-image" style="background-image: url('Purple_Background.jpeg'); height: 100vh">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" aria-current="page" href="home.html">My Meals</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./foods.html">Food Items</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Add
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./add_food.html">Add Food</a></li>
+                            <li><a class="dropdown-item" href="./add_meal.html">Add a Meal</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a class="btn btn-danger navbar-btn" href="./login.html" onclick="handleLogout()">Logout</a>
+            </div>
+        </div>
+    </nav>
+<div class="container d-flex justify-content-center" id="home-container" >
+    <div id="food-form-container">
+        <form id="food-form">
+            <div class="form-group">
+                <label for="enter-name" style="color:papayawhip ; font-size:30px; text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;"><b>Food Name</b></label>
+                <input type="text" class="form-control" id="enter-name" placeholder="Food Name">
+            </div>
+            <div class="form-group">
+                <label for="enter-calories"style="color:papayawhip ; font-size:30px; text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;"><b>Calories</b></label>
+                <input type="text" class="form-control" id="enter-calories" placeholder="Food Calories">
+            </div>
+            <div class="form-group">
+                <label for="enter-description" style="color:papayawhip ; font-size:30px; text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;"><b>Serving Size</b></label>
+                <input type="text" class="form-control" id="enter-description" placeholder="Food Description">
+            </div>
+            <button id="submit-button" type="submit" class="btn btn-info mt-1" onclick="document.location.href='foods.html';">Submit</button>
+        </form>
+        <div id="food-container" class="container-fluid"></div>
+    </div>
+</div>
+
+</div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    <script src="./javascript/add_food.js" type="application/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/home.css" type="text/css">
+    <title>Home</title>
+</head>
+<body>
+<div class="bg-image" style="background-image: url('Kiwi_Background.jpeg'); height: 100vh">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" aria-current="page" href="home.html">My Meals</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./foods.html">Food Items</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Add
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./add_food.html">Add Food</a></li>
+                            <li><a class="dropdown-item" href="./add_meal.html">Add a Meal</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a class="btn btn-danger navbar-btn" href="./login.html" onclick="handleLogout()">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container d-flex justify-content-center" id="home-container" >
+        <div id="food-form-container">
+    <div id="food-container" class="container-fluid"></div>
+<!--Modal -->
+    <div class="modal fade" id="food-edit-modal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="food-edit-modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="food-edit-modal-title">Edit your meal</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick="window.location.reload();"></button>
+            </div>
+            <div class="modal-body d-flex">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Total Calories</th>
+                        <th scope="col">Serving Size</th>
+                        <th scope="col">Remove</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick="window.location.reload();">Close</button>
+                <button type="button" id="add-food-button" class="btn btn-primary" data-bs-dismiss="modal" onclick="document.location.href='foods.html';">Add New Food</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    <script src="./javascript/home.js" type="application/javascript"></script>
+</body>
+</html>
