@@ -7,6 +7,13 @@ The user is able to search for food and get food calories. Based on those, they 
 ## Background
 Calories Trackers are one of the most popular apps. In the US, three out of five persons are trying to lose weight, and this app will help do it.
 
+## App Preview
+
+
+
+https://user-images.githubusercontent.com/10717344/219901424-bdb26552-779c-4dd3-95a5-17e24a84e33c.mp4
+
+
 ## Technologies Stack
 - Java
 - Spring
